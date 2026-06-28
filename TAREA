@@ -1,0 +1,397 @@
+Joyanes Aguilar, L. (2020). Fundamentos de programación: Algoritmos, estructura de datos y objetos. 5.ª ed. McGraw-Hill.
+
+
+INTRODUCCIÓN A LAS COMPUTADORAS Y LOS LENGUAJES DE PROGRAMACIÓN
+1. ¿Qué es una computadora?
+
+Una computadora es un dispositivo electrónico capaz de recibir, almacenar, procesar y transmitir información. Puede trabajar con distintos tipos de datos, como números, textos, imágenes, sonidos y videos. Su principal característica es la capacidad de realizar cálculos y tomar decisiones a velocidades extremadamente superiores a las de un ser humano.
+
+El funcionamiento de una computadora depende de dos elementos fundamentales:
+
+Hardware
+
+Corresponde a todos los componentes físicos de la computadora, tales como:
+
+Procesador
+Memoria
+Teclado
+Monitor
+Disco duro
+Impresora
+Mouse
+
+En otras palabras, el hardware es todo aquello que se puede tocar físicamente.
+
+Software
+
+Está formado por los programas e instrucciones que indican a la computadora qué tareas debe realizar.
+
+Sin software, el hardware sería incapaz de ejecutar funciones útiles. Ambos componentes trabajan de forma conjunta para permitir el procesamiento de información.
+
+El proceso básico de una computadora puede resumirse en tres etapas:
+
+Entrada de datos (Input)
+Procesamiento
+Salida de información (Output)
+
+Por ejemplo, cuando una persona escribe una operación matemática en el teclado, la computadora recibe los datos, realiza los cálculos y muestra el resultado en la pantalla.
+
+2. Origen y evolución de las computadoras
+
+La historia de las computadoras modernas comenzó durante la década de 1930.
+
+Computadora Atanasoff-Berry (ABC)
+
+Fue desarrollada por:
+
+John Atanasoff
+Clifford Berry
+
+Su objetivo era resolver problemas matemáticos relacionados con la física nuclear.
+
+ENIAC
+
+La primera computadora electrónica digital de propósito general fue la ENIAC, terminada en 1946.
+
+Sus características eran impresionantes para la época:
+
+Pesaba aproximadamente 30 toneladas.
+Ocupaba una sala completa.
+Realizaba cálculos militares y científicos.
+
+Fue diseñada por:
+
+J. Presper Eckert
+John Mauchly
+Arquitectura de Von Neumann
+
+En 1946, John von Neumann propuso almacenar programas dentro de la memoria de la computadora.
+
+Este concepto revolucionó la informática porque permitió modificar programas sin cambiar físicamente el hardware.
+
+La mayoría de las computadoras actuales siguen basándose en la llamada Arquitectura de Von Neumann.
+
+Evolución posterior
+
+Con la aparición de:
+
+Transistores
+Circuitos integrados
+Microprocesadores
+
+las computadoras se hicieron:
+
+Más pequeñas
+Más rápidas
+Más económicas
+Más confiables
+
+En los años setenta aparecieron las primeras microcomputadoras, como las desarrolladas por Apple.
+
+En 1981, IBM presentó la computadora personal (PC), cuyo software principal fue desarrollado por Microsoft.
+
+3. Clasificación de las computadoras
+
+Las computadoras modernas pueden clasificarse según su capacidad de procesamiento.
+
+Computadoras personales (PC)
+
+Son las más utilizadas.
+
+Incluyen:
+
+Computadoras de escritorio
+Computadoras portátiles
+
+Se emplean en hogares, oficinas y centros educativos.
+
+Servidores
+
+Son equipos especializados que administran redes y servicios.
+
+Sus funciones incluyen:
+
+Almacenamiento de archivos
+Gestión de usuarios
+Hospedaje de sitios web
+Estaciones de trabajo
+
+Son computadoras de alto rendimiento diseñadas para:
+
+Diseño gráfico
+Simulación
+Ingeniería
+Investigación científica
+Minicomputadoras
+
+Se utilizan en industrias y centros de investigación para tareas especializadas.
+
+Mainframes
+
+Son grandes sistemas de procesamiento masivo de datos utilizados por:
+
+Bancos
+Gobiernos
+Universidades
+Supercomputadoras
+
+Representan el nivel más alto de potencia computacional.
+
+Se utilizan para:
+
+Pronósticos meteorológicos
+Simulaciones científicas
+Investigación espacial
+Inteligencia artificial
+
+Ejemplos destacados incluyen Blue Gene y MareNostrum.
+
+4. Organización física de una computadora
+
+Toda computadora está formada por varios componentes fundamentales.
+
+Unidad Central de Procesamiento (CPU)
+
+Es el cerebro de la computadora.
+
+Está compuesta por:
+
+Unidad de Control (UC)
+
+Coordina y dirige todas las operaciones.
+
+Unidad Aritmética y Lógica (UAL)
+
+Realiza:
+
+Operaciones matemáticas
+Comparaciones lógicas
+Memoria principal
+
+Almacena temporalmente:
+
+Programas
+Datos
+Resultados
+Memoria secundaria
+
+Permite almacenar información de forma permanente.
+
+Ejemplos:
+
+Discos duros
+SSD
+Memorias USB
+DVD
+Dispositivos de entrada
+
+Permiten introducir datos.
+
+Ejemplos:
+
+Teclado
+Mouse
+Escáner
+Micrófono
+Dispositivos de salida
+
+Permiten mostrar resultados.
+
+Ejemplos:
+
+Monitor
+Impresora
+Altavoces
+5. Memoria y almacenamiento
+
+La memoria es uno de los elementos más importantes de una computadora.
+
+Memoria RAM
+
+Características:
+
+Almacena datos temporalmente.
+Es rápida.
+Pierde la información cuando se apaga el equipo.
+
+En ella se cargan los programas durante su ejecución.
+
+Memoria ROM
+
+Características:
+
+Contiene información permanente.
+No pierde datos al apagarse.
+Guarda instrucciones esenciales para iniciar la computadora.
+Memoria Caché
+
+Es una memoria extremadamente rápida utilizada para acelerar el acceso a información frecuente.
+
+Se encuentra cerca o dentro del procesador.
+
+6. Unidades de medida de memoria
+
+La información se almacena mediante bits y bytes.
+
+Bit
+
+Unidad mínima de información.
+
+Puede tomar dos valores:
+
+0
+1
+Byte
+
+Equivale a 8 bits.
+
+Permite representar un carácter.
+
+Múltiplos principales
+Unidad	Equivalencia
+KB	1024 bytes
+MB	1024 KB
+GB	1024 MB
+TB	1024 GB
+PB	1024 TB
+
+Actualmente las computadoras personales suelen trabajar con memorias de varios gigabytes.
+
+7. Representación de la información
+
+Las computadoras representan toda la información mediante secuencias de bits.
+
+Representación de texto
+
+Los caracteres se codifican mediante sistemas como:
+
+ASCII
+
+Utiliza 7 u 8 bits por carácter.
+
+Permite representar:
+
+Letras
+Números
+Símbolos
+Unicode
+
+Utiliza 16 bits o más.
+
+Permite representar caracteres de prácticamente todos los idiomas del mundo.
+
+Representación de números
+
+Los números pueden almacenarse como:
+
+Enteros
+
+No contienen parte decimal.
+
+Ejemplos:
+
+15
+-30
+250
+Reales
+
+Incluyen decimales.
+
+Ejemplos:
+
+3.14
+0.25
+-7.8
+
+Generalmente se almacenan mediante notación de punto flotante.
+
+Representación de imágenes
+
+Las imágenes digitales se representan mediante píxeles.
+
+Cada píxel almacena información de color.
+
+Formatos comunes:
+
+BMP
+JPEG
+GIF
+Representación de sonido
+
+El sonido se transforma en señales digitales mediante muestreo.
+
+Cada muestra registra la amplitud de una onda sonora.
+
+Formatos populares:
+
+WAV
+MP3
+MIDI
+8. Redes de computadoras e Internet
+
+Una red es un conjunto de computadoras conectadas para compartir información y recursos.
+
+Redes LAN
+
+(Local Area Network)
+
+Cubren áreas pequeñas como:
+
+Oficinas
+Escuelas
+Hogares
+Redes WAN
+
+(Wide Area Network)
+
+Cubren grandes distancias.
+
+Internet es el ejemplo más importante.
+
+Modelo Cliente-Servidor
+
+Es el modelo más utilizado en Internet.
+
+Cliente
+
+Solicita servicios o información.
+
+Ejemplo:
+
+Navegador web
+Servidor
+
+Proporciona los recursos solicitados.
+
+Ejemplos:
+
+Sitios web
+Bases de datos
+Servicios de correo
+Redes P2P
+
+(Peer-to-Peer)
+
+Todas las computadoras participan de forma equivalente.
+
+No existe un servidor central.
+
+Se utilizan para compartir:
+
+Archivos
+Recursos
+Potencia de procesamiento
+Internet y la World Wide Web
+
+Internet es una red mundial que conecta millones de dispositivos.
+
+La World Wide Web (WWW) es un sistema que permite acceder a información mediante páginas web.
+
+Fue desarrollada por Tim Berners-Lee.
+
+Las páginas web utilizan principalmente:
+
+HTML
+XML
+
+Para acceder a ellas se emplean navegadores web.
