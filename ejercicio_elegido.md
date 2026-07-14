@@ -60,16 +60,12 @@ numerador = int(input("Numerador del exponente: "))
 denominador = int(input("Denominador del exponente: "))
 
 
-
 exponente = numerador / denominador
-
 
 
 # sin pow()
 
 resultado = 1
-
-
 
 if exponente >= 0:
 
@@ -86,6 +82,58 @@ else:
     resultado = 1 / resultado
 
 
-
 print("Resultado aproximado:", resultado)
+
+
+
+
+## CODIGO C++
+
+
+#include <iostream>
+#include <cmath> // Necesario para std::abs y std::floor
+
+int main() {
+    double base;
+    int numerador;
+    int denominador;
+
+    // Entrada de datos
+    std::cout << "Base: ";
+    std::cin >> base;
+    std::cout << "Numerador del exponente: ";
+    std::cin >> numerador;
+    std::cout << "Denominador del exponente: ";
+    std::cin >> denominador;
+
+    // Evitamos la división por cero
+    if (denominador == 0) {
+        std::cout << "Error: El denominador no puede ser cero." << std::endl;
+        return 1; 
+    }
+
+    // Convertimos numerador a double para evitar la división entera en C++
+    double exponente = static_cast<double>(numerador) / denominador;
+
+    // Sin usar std::pow()
+    double resultado = 1.0;
+
+    if (exponente >= 0) {
+        // aproximación básica (exponente * 10) redondeado hacia abajo a entero
+        int limite = static_cast<int>(std::floor(exponente * 10));
+        for (int i = 0; i < limite; ++i) {
+            resultado *= base;
+        }
+    } else {
+        int limite = static_cast<int>(std::floor(std::abs(exponente) * 10));
+        for (int i = 0; i < limite; ++i) {
+            resultado *= base;
+        }
+        resultado = 1.0 / resultado;
+    }
+
+    std::cout << "Resultado aproximado: " << resultado << std::endl;
+
+    return 0;
+}
 
