@@ -98,8 +98,10 @@ FinAlgoritmo
 
 
 2.Escribir una programa que calcule y devuelva la suma al cuadrado de las componentes de un vector.
+
 #include <iostream>
 #include <vector>
+
 
 void leerVector(std::vector<double>& v, int n) {
     v.resize(n);
