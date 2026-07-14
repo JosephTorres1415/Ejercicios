@@ -2,94 +2,50 @@
 
 
 
-Algoritmo SumaDeCuadrados
+Algoritmo CalcularPotenciaAproximada
 
-    // Subproceso para leer los elementos del vector
-    Funcion leerVector(v Por Referencia, n)
-        Definir i Como Entero
-        Para i <- 0 Hasta n - 1 Con Paso 1 Hacer
-            Escribir "Elemento [", i, "]: "
-            Leer v[i]
+    // Declaración de variables
+    Definir base, exponente, resultado Como Real
+    Definir numerador, denominador, limite, i Como Entero
+
+    // Entrada de datos
+    Escribir "Base: "
+    Leer base
+    Escribir "Numerador del exponente: "
+    Leer numerador
+    Escribir "Denominador del exponente: "
+    Leer denominador
+
+    // Cálculo del exponente decimal
+    exponente <- numerador / denominador
+
+    // Inicialización del resultado
+    resultado <- 1
+
+    // Estructura condicional para evaluar si el exponente es positivo o negativo
+    Si exponente >= 0 Entonces
+        // Se calcula el límite del ciclo (aproximación multiplicada por 10)
+        limite <- ParteEntera(exponente * 10)
+        
+        Para i <- 1 Hasta limite Con Paso 1 Hacer
+            resultado <- resultado * base
         FinPara
-    FinFuncion
-
-    // Subproceso para calcular la suma de los cuadrados
-    Funcion suma <- calcularSumaCuadrados(v, n)
-        Definir suma, elemento Como Real
-        Definir i Como Entero
-        suma <- 0
-        Para i <- 0 Hasta n - 1 Con Paso 1 Hacer
-            elemento <- v[i]
-            suma <- suma + (elemento * elemento)
-        FinPara
-    FinFuncion
-
-    // Proceso Principal (main)
-    Definir n Como Entero
-    Escribir "Ingrese la cantidad de elementos: "
-    Leer n
-
-    Si n <= 0 Entonces
-        Escribir "Cantidad no valida."
     Sino
-        // Dimensionamos el vector dinámicamente con el tamaño 'n'
-        Definir vector Como Real
-        Dimension vector[n]
+        // Si es negativo, usamos el valor absoluto para el bucle
+        limite <- ParteEntera(ValorAbsoluto(exponente) * 10)
         
-        // Llamada a los subprocesos
-        leerVector(vector, n)
+        Para i <- 1 Hasta limite Con Paso 1 Hacer
+            resultado <- resultado * base
+        FinPara
         
-        Definir resultado Como Real
-        resultado <- calcularSumaCuadrados(vector, n)
-        
-        Escribir "La suma de los componentes al cuadrado es: ", resultado
+        // Al ser exponente negativo, el resultado final se invierte (1 / resultado)
+        resultado <- 1 / resultado
     FinSi
 
-FinAlgoritmoAlgoritmo SumaDeCuadrados
-
-    // Subproceso para leer los elementos del vector
-    Funcion leerVector(v Por Referencia, n)
-        Definir i Como Entero
-        Para i <- 0 Hasta n - 1 Con Paso 1 Hacer
-            Escribir "Elemento [", i, "]: "
-            Leer v[i]
-        FinPara
-    FinFuncion
-
-    // Subproceso para calcular la suma de los cuadrados
-    Funcion suma <- calcularSumaCuadrados(v, n)
-        Definir suma, elemento Como Real
-        Definir i Como Entero
-        suma <- 0
-        Para i <- 0 Hasta n - 1 Con Paso 1 Hacer
-            elemento <- v[i]
-            suma <- suma + (elemento * elemento)
-        FinPara
-    FinFuncion
-
-    // Proceso Principal (main)
-    Definir n Como Entero
-    Escribir "Ingrese la cantidad de elementos: "
-    Leer n
-
-    Si n <= 0 Entonces
-        Escribir "Cantidad no valida."
-    Sino
-        // Dimensionamos el vector dinámicamente con el tamaño 'n'
-        Definir vector Como Real
-        Dimension vector[n]
-        
-        // Llamada a los subprocesos
-        leerVector(vector, n)
-        
-        Definir resultado Como Real
-        resultado <- calcularSumaCuadrados(vector, n)
-        
-        Escribir "La suma de los componentes al cuadrado es: ", resultado
-    FinSi
+    // Mostrar el resultado final obtenido
+    Escribir "Resultado aproximado: ", resultado
 
 FinAlgoritmo
-
 
 
 
@@ -97,72 +53,39 @@ FinAlgoritmo
 ## CODIGO 
 
 
-2.Escribir una programa que calcule y devuelva la suma al cuadrado de las componentes de un vector.
+base = float(input("Base: "))
 
-#include <iostream>
+numerador = int(input("Numerador del exponente: "))
 
-#include <vector>
-
-
-void leerVector(std::vector<double>& v, int n) {
-
-    v.resize(n);
-    
-    for (int i = 0; i < n; ++i) {
-    
-        std::cout << "Elemento [" << i << "]: ";
-        
-        std::cin >> v[i];
-        
-    }
-    
-}
+denominador = int(input("Denominador del exponente: "))
 
 
-double calcularSumaCuadrados(const std::vector<double>& v) {
 
-    double suma = 0;
-    
-    for (double elemento : v) {
-    
-        suma += (elemento * elemento);
-        
-    }
-    
-    return suma;
-    
-}
+exponente = numerador / denominador
 
 
-int main() {
 
-    int n;
-    
-    std::cout << "Ingrese la cantidad de elementos: ";
-    
-    std::cin >> n;
-    
+# sin pow()
 
-    if (n <= 0) {
-    
-        std::cout << "Cantidad no valida." << std::endl;
-        
-        return 0;
-        
-    }
+resultado = 1
 
-    std::vector<double> vector;
-    
-    leerVector(vector, n);
-    
 
-    double resultado = calcularSumaCuadrados(vector);
-    
-    std::cout << "La suma de los componentes al cuadrado es: " << resultado << std::endl;
-    
 
-    return 0;
-    
-}
+if exponente >= 0:
 
+    for _ in range(int(exponente * 10)):  # aproximación básica
+
+        resultado *= base
+
+else:
+
+    for _ in range(int(abs(exponente) * 10)):
+
+        resultado *= base
+
+    resultado = 1 / resultado
+
+
+
+print("Resultado aproximado:", resultado)
 
