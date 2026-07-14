@@ -100,41 +100,69 @@ FinAlgoritmo
 2.Escribir una programa que calcule y devuelva la suma al cuadrado de las componentes de un vector.
 
 #include <iostream>
+
 #include <vector>
 
 
 void leerVector(std::vector<double>& v, int n) {
+
     v.resize(n);
+    
     for (int i = 0; i < n; ++i) {
+    
         std::cout << "Elemento [" << i << "]: ";
+        
         std::cin >> v[i];
+        
     }
+    
 }
+
 
 double calcularSumaCuadrados(const std::vector<double>& v) {
+
     double suma = 0;
+    
     for (double elemento : v) {
+    
         suma += (elemento * elemento);
+        
     }
+    
     return suma;
+    
 }
 
+
 int main() {
+
     int n;
+    
     std::cout << "Ingrese la cantidad de elementos: ";
+    
     std::cin >> n;
+    
 
     if (n <= 0) {
+    
         std::cout << "Cantidad no valida." << std::endl;
+        
         return 0;
+        
     }
 
     std::vector<double> vector;
+    
     leerVector(vector, n);
+    
 
     double resultado = calcularSumaCuadrados(vector);
+    
     std::cout << "La suma de los componentes al cuadrado es: " << resultado << std::endl;
+    
 
     return 0;
+    
 }
+
 
